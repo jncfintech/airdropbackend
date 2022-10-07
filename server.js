@@ -13,6 +13,7 @@ const bcrypt = require('bcryptjs');
 const validator = require('validator');
 const JWT = require('jsonwebtoken');
 
+
 const followtasks = require('./followtaskmodel')
 const tweettasks = require('./tweettaskmodel')
 const retweettasks = require('./retweettaskmodel')
@@ -35,7 +36,7 @@ app.use(passport.initialize());
 app.use(passport.session())
 app.use(express.json());
 app.use(cookieParser());
-
+const PORT =8000 || process.env.PORT
 
 mongoose.connect(URI);
 
@@ -563,6 +564,6 @@ app.post('/saveretweettaskstatus', async(req,res)=>{
 
 
 
-app.listen(8000, () => {
+app.listen(PORT, () => {
     console.log('server is run on port 8000');
 })

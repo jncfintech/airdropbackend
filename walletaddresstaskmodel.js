@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const walletaddressSchema = mongoose.Schema({
     walletAddress : {
-        type: Number,
+        type: String,
     
     },
     loggedUserData : {

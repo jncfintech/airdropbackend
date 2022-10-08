@@ -31,7 +31,7 @@ app.use(
       maxage: 24 * 60* 60 * 100,
     })
 )
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: 'http://35.78.65.206:3000/' }));
 app.use(passport.initialize());
 app.use(passport.session())
 app.use(express.json());
